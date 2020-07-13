@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Assignment 1</title>
+    </head>
+    <body>
+        <!-- <h1>current date</h1> -->
+        <script>
+            var myDate= new Date() ;
+            var myDay = myDate.getDay();
+            
+            var weekDay = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+             document.write("Today is " + weekDay [myDay]);
+             document.write("<br/>");
+
+             //for time
+             var hours = myDate.getHours(); 
+        var ampm = hours >= 12 ? 'PM' : 'AM'; 
+        hours = hours % 12; 
+        hours = hours ? hours : 12; 
+        var minutes = myDate.getMinutes(); 
+        minutes = minutes < 10 ? '0' + minutes : minutes; 
+        var myTime = hours + " " + ampm + " : " + minutes +  
+            " : " + myDate.getMilliseconds(); 
+        document.write("\tCurrent time is : " + myTime); 
+    </script>
+    </body>
+</html>
